@@ -1,0 +1,62 @@
+body {
+    background-color: aqua;
+}
+
+#license {
+    font-family: monospace;
+    columns: 3;
+    column-width: auto;
+    width: 550px;
+    margin: 30px;
+    background-image: url(/src/assets/images/hills.jpeg);
+    background-blend-mode: lighten;
+    background-size: cover;
+    height: 350px;
+    border-radius: 25px;
+    padding-bottom: 0;
+    position: absolute;
+    text-shadow: rgb(255, 255, 255) 0px 0px 3px;
+}
+
+
+#license img {
+    box-shadow: 0 0 8px 8px white inset;
+    object-fit: cover;
+    width: 165px;
+    display: inline;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 220px;
+    margin-left: 15px;
+    margin-bottom: -50px;
+}
+
+#col2 {
+    margin-top: 100px;
+}
+
+#col1 {}
+
+#col3 {
+    display: block;
+}
+
+#signature {
+    font-family: signature;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 15px;
+    position: absolute;
+}
+
+@font-face {
+    font-family: signature;
+    src: url(../assets/fonts/BjornssonSignatureRegular-BWmwB.ttf);
+}
+
+h2 {
+    font-style: italic;
+    font-size: 40px;
+}
