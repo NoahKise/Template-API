@@ -1,5 +1,8 @@
 body {
     background-color: aqua;
+    background-image: url(/src/assets/images/alley2.jpeg);
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 #license {
@@ -8,7 +11,9 @@ body {
     column-width: auto;
     column-gap: 10px;
     width: 550px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     background-image: url(/src/assets/images/hills.jpeg);
     background-size: cover;
     height: 350px;
@@ -64,6 +69,89 @@ h2 {
 
 #backstory {
     width: 550px;
-    margin-left: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     font-family: monospace;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 550px;
+    border-radius: 10px;
+}
+
+
+input {
+    border-radius: 10px;
+}
+
+select {
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 10px;
+    height: 40px;
+    width: 250px;
+    font-size: 18px;
+}
+
+#cop {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 550px;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#quoteDisplay {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    width: 550px;
+    border-radius: 10px;
+}
+
+#gifDisplay {
+    margin-top: 30px;
+    border: 30px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/styles.css";
 import { getId } from "./js/identity";
 import { getPhoto } from "./js/photo";
+import { getQuote } from "./js/simpsons";
+import { getGif } from "./js/giphy";
 
 //UI LOGIC
 
@@ -53,7 +55,25 @@ async function handleFormSubmission(e) {
     backstory.append("Your new name is " + identity.result.name.first_name + " " + identity.result.name.last_name + ". You were born on " + identity.result.extras.birth_date + ". If anyone asks, you live at " + identity.result.address.street + " in " + identity.result.address.city + ", " + identity.result.address.state + ". You are a " + identity.result.occupation.job + " at " + identity.result.occupation.company + ", and have been for 6 years. If you get into a scrape, your papers say your blood type is " + identity.result.extras.blood_type + ", so you'll have to tell the doc your real one. Vinny is waiting for you down at the pier with a " + identity.result.extras.favorite_color + " " + identity.result.extras.vehicle + ". If your cover gets blown, call " + identity.result.phone.phone_number + ". That number is for emergencies ONLY. Ok, enjoy your new life " + identity.result.name.first_name + "!");
     body.append(license, backstory);
 }
+async function handleCopSubmission(e) {
+    e.preventDefault();
+    if (document.getElementById("are-you-a-cop").value === "no") {
+        document.getElementById("not-cop").removeAttribute("class");
+        document.getElementById("cop").setAttribute("class", "hidden");
+    } else {
+        const gif = await getGif();
+        const quote = await getQuote();
+        const quoteDisplay = document.createElement("p");
+        const gifDisplay = document.createElement("img");
+        gifDisplay.setAttribute("id", "gifDisplay");
+        gifDisplay.setAttribute("src", gif);
+        quoteDisplay.setAttribute("id", "quoteDisplay");
+        quoteDisplay.append('"' + quote + '"' + " -Chief Wiggum");
+        const body = document.querySelector("body");
+        body.append(gifDisplay, quoteDisplay);
 
+    }
+}
 
-
-document.querySelector("form").addEventListener("submit", handleFormSubmission);
+document.getElementById("cop").addEventListener("submit", handleCopSubmission);
+document.getElementById("identity").addEventListener("submit", handleFormSubmission);
