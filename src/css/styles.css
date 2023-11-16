@@ -19,6 +19,7 @@ body {
     height: 350px;
     border-radius: 25px;
     text-shadow: rgb(255, 255, 255) 0px 0px 8px;
+    border-bottom: 20px solid aquamarine;
 }
 
 
@@ -34,6 +35,8 @@ body {
     margin-bottom: -50px;
 }
 
+
+
 #col2 {
     line-height: 20px;
     padding-left: 10px;
@@ -44,14 +47,25 @@ body {
 }
 
 #col3 {
-    padding-top: 90px;
+    padding-top: 86px;
+    margin-left: -10px;
+}
+
+#col3 img {
+    position: absolute;
+    margin-top: -75px;
+    margin-left: 110px;
+    width: 60px;
+    height: 60px;
+    opacity: 75%;
+
 }
 
 #signature {
     font-family: signature;
     font-size: 36px;
-    margin-top: 30px;
-    margin-left: 15px;
+    margin-top: 48px;
+    margin-left: 20px;
     position: absolute;
 }
 
@@ -61,10 +75,16 @@ body {
 }
 
 h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: absolute;
     padding-left: 20px;
     font-style: italic;
     font-size: 40px;
+    background-color: aquamarine;
+    width: 550px;
+    border-radius: 25px 25px 0 0;
+    padding-left: 40px;
+    border-bottom: 22px solid white;
 }
 
 #backstory {
@@ -157,8 +177,7 @@ button {
 }
 
 #intro {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
     text-align: center;
     margin-top: 30px;
     margin-left: auto;
