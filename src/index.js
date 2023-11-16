@@ -45,8 +45,8 @@ async function handleFormSubmission(e) {
     lastName.append(identity.result.name.last_name);
     const body = document.querySelector("body");
     col1.append(state, img, signature);
-    col2.append(lastName, firstName, addressLine1, addressLine2, birthdate);
-    col3.append(sex, height, weight);
+    col2.append(lastName, firstName, addressLine1, addressLine2);
+    col3.append(birthdate, sex, height, weight);
     license.append(col1, col2, col3);
     body.append(license);
 }
