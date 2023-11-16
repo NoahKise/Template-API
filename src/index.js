@@ -62,6 +62,7 @@ async function handleCopSubmission(e) {
         document.getElementById("not-cop").removeAttribute("class");
         document.getElementById("cop").setAttribute("class", "hidden");
     } else {
+        document.getElementById("copform").setAttribute("class", "hidden");
         const resultDiv = document.getElementById("results");
         resultDiv.innerHTML = "";
         const gif = await getGif();
@@ -73,6 +74,7 @@ async function handleCopSubmission(e) {
         quoteDisplay.setAttribute("id", "quoteDisplay");
         quoteDisplay.append('"' + quote + '"' + " -Chief Wiggum");
         resultDiv.append(gifDisplay, quoteDisplay);
+        
 
     }
 }
