@@ -1,7 +1,8 @@
 export async function getGif() {
     const apiKey2 = process.env.API_KEY2;
-    const offset = Math.floor(Math.random() * 10);
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey2}&q=chief+wiggum&limit=1&offset=${offset}&rating=r&lang=en&bundle=messaging_non_clips`;
+    const offset = Math.floor(Math.random() * 6);
+    const array = [0, 1, 8, 11, 3, 2];
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey2}&q=chief+wiggum&limit=1&offset=${array[offset]}&rating=r&lang=en&bundle=messaging_non_clips`;
 
     try {
         const response = await fetch(url);

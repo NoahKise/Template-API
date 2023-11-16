@@ -45,7 +45,8 @@ async function handleFormSubmission(e) {
     const img = document.createElement("img");
     img.setAttribute("src", photo);
     lastName.append(identity.result.name.last_name);
-    const body = document.querySelector("body");
+    const resultDiv = document.getElementById("results");
+    resultDiv.innerHTML = "";
     col1.append(state, img, signature);
     col2.append(lastName, firstName, addressLine1, addressLine2);
     col3.append(birthdate, sex, height, weight);
@@ -53,7 +54,7 @@ async function handleFormSubmission(e) {
     const backstory = document.createElement("p");
     backstory.setAttribute("id", "backstory");
     backstory.append("Your new name is " + identity.result.name.first_name + " " + identity.result.name.last_name + ". You were born on " + identity.result.extras.birth_date + ". If anyone asks, you live at " + identity.result.address.street + " in " + identity.result.address.city + ", " + identity.result.address.state + ". You are a " + identity.result.occupation.job + " at " + identity.result.occupation.company + ", and have been for 6 years. If you get into a scrape, your papers say your blood type is " + identity.result.extras.blood_type + ", so you'll have to tell the doc your real one. Vinny is waiting for you down at the pier with a " + identity.result.extras.favorite_color + " " + identity.result.extras.vehicle + ". If your cover gets blown, call " + identity.result.phone.phone_number + ". That number is for emergencies ONLY. Ok, enjoy your new life " + identity.result.name.first_name + "!");
-    body.append(license, backstory);
+    resultDiv.append(license, backstory);
 }
 async function handleCopSubmission(e) {
     e.preventDefault();
@@ -61,6 +62,8 @@ async function handleCopSubmission(e) {
         document.getElementById("not-cop").removeAttribute("class");
         document.getElementById("cop").setAttribute("class", "hidden");
     } else {
+        const resultDiv = document.getElementById("results");
+        resultDiv.innerHTML = "";
         const gif = await getGif();
         const quote = await getQuote();
         const quoteDisplay = document.createElement("p");
@@ -69,8 +72,7 @@ async function handleCopSubmission(e) {
         gifDisplay.setAttribute("src", gif);
         quoteDisplay.setAttribute("id", "quoteDisplay");
         quoteDisplay.append('"' + quote + '"' + " -Chief Wiggum");
-        const body = document.querySelector("body");
-        body.append(gifDisplay, quoteDisplay);
+        resultDiv.append(gifDisplay, quoteDisplay);
 
     }
 }
