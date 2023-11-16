@@ -66,13 +66,13 @@ async function handleCopSubmission(e) {
         const resultDiv = document.getElementById("results");
         resultDiv.innerHTML = "";
         const gif = await getGif();
-        const quote = await getQuote();
+        const simpQuote = await getQuote();
         const quoteDisplay = document.createElement("p");
         const gifDisplay = document.createElement("img");
         gifDisplay.setAttribute("id", "gifDisplay");
         gifDisplay.setAttribute("src", gif);
         quoteDisplay.setAttribute("id", "quoteDisplay");
-        quoteDisplay.append('"' + quote + '"' + " -Chief Wiggum");
+        quoteDisplay.append('"' + simpQuote[0].quote + '"' + " -" + simpQuote[0].character);
         resultDiv.append(gifDisplay, quoteDisplay);
         
 
