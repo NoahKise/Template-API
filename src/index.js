@@ -18,7 +18,7 @@ async function handleFormSubmission(e) {
         const body = document.querySelector("body");
         const nic = document.createElement("img");
         nic.setAttribute("id", "nic");
-        nic.setAttribute("src", "https://comicvine.gamespot.com/a/uploads/original/11125/111256449/5186673-4571400273-tumbl.jpg");
+        nic.setAttribute("src", "https://64.media.tumblr.com/e9b641d93cbc6ffd71e58d312bc7e567/tumblr_mjyqdbMdUJ1s5jjtzo1_500.gif");
         body.append(errorMessage, nic);
         return;
     }
