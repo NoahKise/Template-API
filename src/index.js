@@ -10,8 +10,20 @@ import { getGif } from "./js/giphy";
 
 async function handleFormSubmission(e) {
     e.preventDefault();
+    const ageInput = document.getElementById("age").value;
+    if (!ageInput) {
+        const errorMessage = document.createElement("p");
+        errorMessage.setAttribute("id", "errorMessage");
+        errorMessage.append("Come on, you have to give me an age!");
+        const body = document.querySelector("body");
+        const nic = document.createElement("img");
+        nic.setAttribute("id", "nic");
+        nic.setAttribute("src", "https://comicvine.gamespot.com/a/uploads/original/11125/111256449/5186673-4571400273-tumbl.jpg");
+        body.append(errorMessage, nic);
+        return;
+    }
     const gender = document.getElementById("gender").value;
-    const age = document.getElementById("age").value;
+    const age = ageInput;
     const identity = await getId(gender, age);
     const photo = await getPhoto(gender);
     const license = document.createElement("div");
